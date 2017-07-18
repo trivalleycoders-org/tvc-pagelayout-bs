@@ -2,7 +2,7 @@
 import React from 'react';
 import { Panel, Image } from 'react-bootstrap'
 import './style.css';
-import Identicon from './../../Identicon'
+import Identicon from '../../../../elements/Identicon'
 // import * as ku from '../../../../lib/ke-utils'
 
 const Member = (props) => {
@@ -10,20 +10,23 @@ const Member = (props) => {
   const getPicture = () => {
     if (!props.picture) {
       return <Identicon
+        style='member-img'
         hash={props._id}
              />
     } else {
-      return <Image src={props.picture} responsive alt='member picture' />
+      return <Image className='member-img' src={props.picture} responsive alt='member picture' />
     }
   }
   return (
-    <Panel id='panel-member' className='panel-member gray-panel'>
-      <div id='member-img-container' className='member-img-container'>
+    <div className='member-item'>
+      <div className='member-img-container'>
         {getPicture()}
       </div>
-      <h4 id='member-member-name' className=''>{props.name}</h4>
-      <h5 id='member-member-role' className='member-role'>{props.role}</h5>
-    </Panel>
+      <div className='member-text'>
+        <span className='member-name'>{props.name}</span>
+        <span className='member-role'>{props.role}</span>
+      </div>
+    </div>
   )
 };
 

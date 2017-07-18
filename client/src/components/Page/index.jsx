@@ -1,66 +1,54 @@
 // Page
 import React from 'react';
-import { connect } from 'react-redux';
 import { Component } from 'react';
-import { Grid, Row } from 'react-bootstrap';
-import * as actionCreators from '../../store/actions';
-import * as selectors from '../../store/selectors';
-import Navigation from './Navigation'
-import Header from './Header';
-import About from './About';
-import TechLogos from './TechLogos';
-import Events from './Events';
-// import Projects from './Projects';
-import Members from './Members';
-import Sponsors from './Sponsors';
-import Footer from './Footer';
+import { Grid, Row, Col, Navbar, Nav, NavItem } from 'react-bootstrap';
+import About from './About'
+import Events from './Events'
+import Footer from './Footer'
+import Header from './Header'
+import Members from './Members'
+import Sponsors from './Sponsors'
+import TechLogos from './TechLogos'
 import './style.css';
-// import NewForm from './NewForm';
-// import * as ku from '../../lib/ke-utils';
+import iCSS from '../../images/tech-logos/css-3.01.svg'
+import iExpress from '../../images/tech-logos/express.svg'
 
 class Page extends Component {
+  // Navigation
+  // About
+  // TechLogos
+  // Events
+  // Members
+  // Sponsors
+  // Footer
   render () {
     return (
-      <Grid id='page-grid-outer' className='page-grid-outer' fluid>
-        <Row id='page-row-outer' className='page-row-outer'>
-          <Grid id='page-grid-inner-fluid' fluid>
-            <Row id='page-row-inner'>
-              <div id="page-top">
-                <Navigation />
-              </div>
-              <div id='header-about' className='black-background'>
-                <Header />
-                <About />
-              </div>
-
-              <div id="page-learn">
-                <TechLogos />
-              </div>
-              <div id="page-events">
-                <Events />
-              </div>
-              {/* <Projects /> */}
-              <div id="page-members">
-                <Members />
-              </div>
-              <div id="page-sponsors">
-                <Sponsors />
-              </div>
-              <Footer />
-            </Row>
-          </Grid>
-        </Row>
-      </Grid>
+      <div>
+        <Navbar inverse collapseOnSelect>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <a href="#">React-Bootstrap</a>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav pullRight>
+              <NavItem eventKey={1} href="#">Link Right</NavItem>
+              <NavItem eventKey={2} href="#">Link Right</NavItem>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+        
+        <Header />
+        <About />
+        <TechLogos />
+        {/* <Events /> */}
+        <Members />
+        {/* <Sponsors /> */}
+        {/* <Footer /> */}
+      </div>
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  let showManageMembers = selectors.getShowManageMembers(state);
-  const o = {
-    showManageMembers: showManageMembers
-  }
-   return o;
-}
-// export default Page;
-export default connect(mapStateToProps, actionCreators)(Page);
+export default Page;

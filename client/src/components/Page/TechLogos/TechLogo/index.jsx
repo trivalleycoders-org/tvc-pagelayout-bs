@@ -1,23 +1,26 @@
 // TechLogo
 
 import React from 'react';
-import { Panel, Image } from 'react-bootstrap';
-import classNames from 'classnames'
+import { Grid } from 'react-bootstrap';
 import './style.css';
+import classNames from 'classnames'
 
 const TechLogo = (props) => {
   const imageStyle = classNames(
     {
-      'tech-logo-image': true,
+      // 'tech-logo-image': true,
       [props.style]: props.style ? true : false,
     }
   )
+
   return (
-    <Panel id='tech-logo-panel' className='tech-logo-panel gray-panel'>
-      <Image id='tech-logo-image' className={imageStyle} src={props.url} alt="logo" />
-      <h4 className='small logo-name'>{props.name}</h4>
-    </Panel>
-  );
-};
+    <Grid id='techlogo' fluid>
+      <Grid>
+        <img className={imageStyle} src={props.url} alt="logo" />
+        <span className='logo-text'>{props.name}</span>
+      </Grid>
+    </Grid>
+  )
+}
 
 export default TechLogo;

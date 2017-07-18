@@ -1,82 +1,35 @@
 // Members
-import React from 'react';
-import { Component } from 'react';
-import { Grid, Row } from 'react-bootstrap';
-import pChad from '../../../images/chad.jpg';
-import pLaura from '../../../images/laura.jpeg';
-import pMichael from '../../../images/michael.jpg';
-import pNathan from '../../../images/nathan.jpg';
-import pSharmina from '../../../images/sharmina.jpg';
-import Member from './Member';
-import './style.css';
+import React from 'react'
+import { Grid } from 'react-bootstrap'
+import './style.css'
+import Member from './Member'
+import arrMembers from './members-data'
 
-class Members extends Component {
-  render() {
-
-    const arrMembers = [
-      {
-        id: '7a8a0c654b89f157524be1b68adf9dbecc4f1db0',
-        picture: '',
-        name: 'Karl',
-        role: 'Web Developer & Organizer',
-      },
-      {
-        id: 102,
-        picture: pChad,
-        name: 'Chad',
-        role: 'Full-Stack Developer',
-      },
-      {
-        id: 103,
-        picture: pLaura,
-        name: 'Laura',
-        role: 'Web Developer',
-      },
-      {
-        id: 104,
-        picture: pMichael,
-        name: 'Michael',
-        role: 'Sr Web Developer'
-      },
-      {
-        id: 105,
-        picture: pNathan,
-        name: 'En Zyme',
-        role: 'Python & Data Science',
-      },
-      {
-        id: 106,
-        picture: pSharmina,
-        name: 'Sharmina',
-        role: 'Web Developer',
-      },
-    ]
-
-    const members = arrMembers.map((m) => (
-      <Member
-        key={m.id}
-        _id={m.id}
-        picture={m.picture}
-        name={m.firstName}
-        role={m.role}
-        index={m.index}
-      />
-    ))
-    return (
-      <section id='members' className='green-background dark-font'>
-        <Grid className='outer-grid'>
-          <Row className='main-row'>
+const Members = () => {
+  const members = arrMembers.map((m) => (
+    <Member
+      key={m.id}
+      _id={m.id}
+      picture={m.picture}
+      name={m.name}
+      role={m.role}
+      index={m.index}
+    />
+  ))
+  return (
+    <Grid id='members' fluid className='bg-green'>
+      <Grid>
+        <section id='members' className='green-background'>
+          <div className='section-container container-fluid members-container'>
             <h1 className='section-title'>Members</h1>
             <div className='members'>
               {members}
             </div>
-          </Row>
-        </Grid>
-      </section>
-    )
-
-  }
+          </div>
+        </section>
+      </Grid>
+    </Grid>
+  )
 }
-
 
 export default Members;
