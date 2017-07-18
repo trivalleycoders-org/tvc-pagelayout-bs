@@ -38,14 +38,14 @@ class Page extends Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        
+
         <Header />
         <About />
         <TechLogos />
-        {/* <Events /> */}
+        <Events />
         <Members />
-        {/* <Sponsors /> */}
-        {/* <Footer /> */}
+        <Sponsors />
+        <Footer />
       </div>
     )
   }

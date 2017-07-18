@@ -16,6 +16,7 @@ const Members = () => {
       index={m.index}
     />
   ))
+
   return (
     <Grid id='members' fluid className='bg-green'>
       <Grid>
