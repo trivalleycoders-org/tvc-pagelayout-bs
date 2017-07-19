@@ -24,3 +24,23 @@ h1, h2 {
 .bg-black-gradient {
   background: linear-gradient(to top, #1d1d1d, #3c3c3c);
 }
+
+/*
+ * Vertically center in a Bootstrap column
+ */
+ .bootstrap-col-vcenter {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+.bootstrap-row-eq-height {
+  /*display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;*/
+}

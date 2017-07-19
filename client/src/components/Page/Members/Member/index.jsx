@@ -1,6 +1,6 @@
 // Member
 import React from 'react';
-import { Panel, Image } from 'react-bootstrap'
+import { Row, Col, Image } from 'react-bootstrap'
 import './style.css';
 import Identicon from '../../../../elements/Identicon'
 // import * as ku from '../../../../lib/ke-utils'
@@ -18,15 +18,17 @@ const Member = (props) => {
     }
   }
   return (
-    <div className='member-item'>
-      <div className='member-img-container'>
+    <Col xs={2}>
+      <Row>
         {getPicture()}
-      </div>
-      <div className='member-text'>
-        <span className='member-name'>{props.name}</span>
-        <span className='member-role'>{props.role}</span>
-      </div>
-    </div>
+      </Row>
+      <Row className='member-name-row'>
+        {props.name}
+      </Row>
+      <Row className='member-name-row'>
+        {props.role}
+      </Row>
+    </Col>
   )
 };
 

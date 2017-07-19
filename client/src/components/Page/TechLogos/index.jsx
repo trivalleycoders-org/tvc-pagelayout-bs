@@ -3,79 +3,28 @@ import React from 'react';
 import { Grid } from 'react-bootstrap'
 import './style.css';
 import TechLogo from './TechLogo';
-// Basics
-import iHTML from './tech-logos/html-5.01.svg'
-import iCSS from './tech-logos/css-3.01.svg'
-import iJS from './tech-logos/javascript.svg'
-// MERN
-// import iMongo from './tech-logos/mongodb.on-black.01.svg'
-import iMongo from './tech-logos/mongodb.svg'
-// import iExpress from './tech-logos/express.on-black.01.svg'
-import iExpress from './tech-logos/express.svg'
-import iReact from './tech-logos/react.svg'
-// import iNode from './tech-logos/nodejs.on-black.01.svg'
-// import iNode from './tech-logos/nodejs.svg'
-import iNode from './tech-logos/nodejs.on-green.svg'
+import { basicsLogos, mernLogos } from './tech-logo-data'
 
 const TechLogos = () => {
-  const arrBasics = [
-      {
-        name: 'HTML 5',
-        image: iHTML,
-        style: "small-image",
-      },
-      {
-        name: 'CSS 3',
-        image: iCSS,
-        style: "small-image",
-      },
-      {
-        name: 'JavaScript',
-        image: iJS,
-        style: "small-image",
-      },
-    ]
-    const basics = arrBasics.map((t) => (
-      <TechLogo
-        key={t.name}
-        name={t.name}
-        url={t.image}
-        style={t.style}
-      />
-    ))
-    console.log('basics', basics)
-    const arrMERN = [
-      {
-        name: 'MongoDB',
-        image: iMongo,
-        style: 'wide-image',
-      },
-      {
-        name: 'Express',
-        image: iExpress,
-        style: 'express-image',
-      },
-      {
-        name: 'React',
-        image: iReact,
-        style: "small-image",
-      },
-      {
-        name: 'Node',
-        image: iNode,
-        style: "small-image",
-      },
-    ]
 
-    const mern = arrMERN.map((t) => (
-      <TechLogo
-        key={t.name}
-        name={t.name}
-        style={t.style}
-        url={t.image}
-      />
-    ))
-    console.log('mern', mern)
+  const basics = basicsLogos.map((t) => (
+    <TechLogo
+      key={t.name}
+      name={t.name}
+      url={t.image}
+      style={t.style}
+    />
+  ))
+
+
+  const mern = mernLogos.map((t) => (
+    <TechLogo
+      key={t.name}
+      name={t.name}
+      style={t.style}
+      url={t.image}
+    />
+  ))
   return (
     <Grid id='tech-logos' fluid className='bg-green'>
       <Grid>

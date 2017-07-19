@@ -1,16 +1,20 @@
 // Sponsor
 import React from 'react';
-import { Panel, Image } from 'react-bootstrap'
+import { Row, Col, Image } from 'react-bootstrap'
 import './style.css';
 
 const Sponsor = (props) => (
-  <Panel className='panel-sponsor'>
-    <div id='sponsor-img-container' className='sponsor-img-container'>
+  <div className='sponsor-item'>
+    <Row>
       <Image className='sponsor-img' src={props.picture} responsive alt='sponsor picture' />
-    </div>
-    <h4 id='sponsor-name' className=''>{props.name}</h4>
-    <h5 id='sponsor-tagline' className='sponsor-tagline'>{props.tagLine}</h5>
-  </Panel>
+    </Row>
+    <Row>
+      <h4 id='sponsor-name' className='sponsor-name'>{props.name}</h4>
+    </Row>
+    <Row>
+      <h5 id='sponsor-tagline' className='sponsor-tagline'>{props.tagLine}</h5>
+    </Row>
+  </div>
 );
 
 export default Sponsor;

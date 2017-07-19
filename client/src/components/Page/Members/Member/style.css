@@ -1,46 +1,13 @@
 /* Member */
 
-.member-item {
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 10px;
-  justify-content: space-between;
-  max-width: 130px;
-}
-
-.member-container {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  height: 100%;
-}
 .member-img {
   max-height: 110px;
+  margin: auto;
 }
-.member-text {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 100%;
+
+.member-name-row {
   text-align: center;
-  margin-top: 10px;
 }
-.member-name {
-  font-weight: bold;
-  /*font-size: 1.2em;*/
-}
-.member-role {
-  margin-top: 3px;
-  /*font-size: 1.1em;*/
-}
-#member-name {
-  /*font-size: 1.3em;*/
-  font-weight: 300;
-}
-
-#member-role {
-
-}
-
 
 /*
     PHONE

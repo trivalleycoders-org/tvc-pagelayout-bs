@@ -1,29 +1,28 @@
 /*Event*/
 
 .events-panel {
-  /*font-size: 1.3em;*/
   border: none;
   text-align: left;
-  padding-bottom: 5px;
+  /*padding-bottom: 5px;*/
+  background-color: transparent;
 }
-.event-name-col {
-  margin-bottom: 10px;
+
+.event-row {
+  margin-bottom: 15px;
 }
+
 #event-name-anchor {
   color: #34E97C;
   font-weight: bold;
-  /*font-size: 1.12em;*/
   text-decoration: none;
 }
+
 #event-name-anchor:hover {
   text-decoration-line: underline;
 }
-.event-location-name {
-  margin-bottom: 0;
-  /*font-size: 1.05em;*/
-}
-.event-location-address {
-  margin-bottom: 0;
+
+.colu {
+  border-right: 1px solid white !important;
 }
 .odd {
   background-color: rgba(180,180,180,0.1);
